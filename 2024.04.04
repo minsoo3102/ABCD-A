@@ -1,0 +1,199 @@
+# Quiz 1
+a = '★'
+
+for i in range(3):
+  for j in range(1):
+    print(a * 4)
+
+# Quiz 1 (함수)
+a = '★'
+
+for i in range(3):
+  for j in range(1):
+    print(a * 4)
+    ----
+ # Quiz 2
+for i in range(3):  # 3줄 출력
+    print('★ ' * 4)  # 별을 4개씩 출력
+
+#Quiz 2 (함수)
+def print_star_pattern():
+    for i in range(3):
+        print('★ ' * 4)
+print_star_pattern()
+-----
+#Quiz 3 (함수)
+horizontal_stars = '★★★'
+vertical_repeats = '★★★★' 
+
+for i in vertical_repeats:
+  print(horizontal_stars)
+
+#Quiz 3 (함수)
+def print_star_pattern(horizontal_stars, vertical_repeats):
+    for _ in vertical_repeats:
+        print(horizontal_stars)
+
+# 함수 호출
+horizontal_stars = '★★★'
+vertical_repeats = '★★★★'
+print_star_pattern(horizontal_stars, vertical_repeats)
+-----
+#Quiz 4
+star = '☆'
+
+horizental_stars = star * 3
+
+for i in range(4):
+  print(horizental_stars)
+
+#Quiz 4 (함수)
+def print_star_pattern(star, num_rows):
+    horizontal_stars = star * 3
+    for i in range(num_rows):
+        print(horizontal_stars)
+
+# 함수 호출
+star = '☆'
+num_rows = 4
+print_star_pattern(star, num_rows)
+------
+#Quiz 5
+import math
+ 
+R = int(input("반지름을 설정해주세요 "))
+h = int(input("높이를 설정해주세요 "))
+
+Result = (3 * (R*R)) * h 
+R_R = round(Result, 3) 
+
+print(R_R)
+
+#Quiz 5 (함수)
+def calculate_cylinder_volume(R, h):
+    result = (3 * (R**2)) * h
+    return round(result, 3)
+
+# 사용자로부터 반지름과 높이 입력 받기
+R = int(input("반지름을 설정해주세요: "))
+h = int(input("높이를 설정해주세요: "))
+
+# 원기둥 부피 계산
+cylinder_volume = calculate_cylinder_volume(R, h)
+
+# 결과 출력
+print(cylinder_volume)
+----
+#Quiz 5-1 
+import math
+
+R = 5
+h = 10
+
+Result = (3 * (R*R)) * h 
+R_R = round(Result, 3) 
+
+print(R_R)
+
+#Quiz 5-1 (함수)
+def calculate_cylinder_volume(R, h):
+    result = (3 * (R**2)) * h
+    return round(result, 3)
+
+# 반지름과 높이를 직접 설정
+R = 5
+h = 10
+
+# 원기둥 부피 계산
+cylinder_volume = calculate_cylinder_volume(R, h)
+
+# 결과 출력
+print(cylinder_volume)
+----
+#Quiz 6 
+import datetime
+
+x = datetime.datetime.now()
+
+print(x)
+
+#Quiz 6 (함수)
+import datetime
+
+def print_current_time():
+    x = datetime.datetime.now()
+    print(x)
+
+# 함수 호출
+print_current_time()
+
+#Quiz 6-1 
+import datetime
+
+# 현재 시간 가져오기
+current_time = datetime.datetime.now()
+
+# 현재 시간의 년, 월, 일, 시간, 분, 초를 각각 변수에 저장
+year = current_time.year
+month = current_time.month
+day = current_time.day
+hour = current_time.hour
+minute = current_time.minute
+second = current_time.second
+
+# 출력
+print("년:", year)
+print("월:", month)
+print("일:", day)
+print("시간:", hour)
+print("분:", minute)
+print("초:", second)
+
+#Quiz 6-1 (함수)
+import datetime
+
+def print_current_datetime():
+    # 현재 시간 가져오기
+    current_time = datetime.datetime.now()
+
+    # 현재 시간의 년, 월, 일, 시간, 분, 초를 각각 변수에 저장
+    year = current_time.year
+    month = current_time.month
+    day = current_time.day
+    hour = current_time.hour
+    minute = current_time.minute
+    second = current_time.second
+
+    # 출력
+    print("년:", year)
+    print("월:", month)
+    print("일:", day)
+    print("시간:", hour)
+    print("분:", minute)
+    print("초:", second)
+
+# 함수 호출
+print_current_datetime()
+----
+#Quiz 7
+heights = (150, 160, 170, 180, 174)
+
+# 키가 170cm보다 큰 경우만 출력
+for height in heights:
+    if height <= 170:
+        continue
+    print(height,"cm")
+
+#Quiz 7 (함)
+def print_heights_above_170(heights):
+    for height in heights:
+        if height <= 170:
+            continue
+        print(height, "cm")
+
+# 키가 저장된 튜플
+heights = (150, 160, 170, 180, 174)
+
+# 함수 호출
+print_heights_above_170(heights)
+
